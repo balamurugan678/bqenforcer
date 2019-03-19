@@ -1,0 +1,785 @@
+{
+  "dsapusecases": [
+    {
+      "usecasename": "Client Exiting Excluding Canada",
+      "UseCaseCollibraID": "yty-76-u",
+      "masterusecase": "Client Management",
+      "MasterUseCaseCollibraId": "rtr-567-yuu",
+      "assettables": [
+        {
+          "TableName": "AccountDetails",
+          "VersionNumber": "2",
+          "TableID": "tty-44-yu",
+          "TableAlias": "AccountDetails",
+          "DataAsset": "Client Account",
+          "DataAssetCategory": "Client Account Details",
+          "HostingDetails": {
+            "CloudProviderName": "GCP",
+            "TableLocation": "EU",
+            "DataBaseName": "DSAPDemo",
+            "DataBasePort": "0",
+            "DataBaseProjectName": "gbm-big-data-pilot"
+          },
+          "TableRestrictions": [
+            {
+              "fields": [
+                {
+                  "name": "Country_of_Incorporation",
+                  "DataType": "String",
+                  "value": "Canada",
+                  "operation": "!=",
+                  "dsaprule_id": "dsap_yu-9"
+                }
+              ]
+            }
+          ],
+          "TableSchema": {
+            "TableFields": [
+              {
+                "FieldName": "Consolidated_Account_Balance",
+                "DataType": "Float",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "Generalization",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "null",
+                        "DataType": "null",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "FieldName": "Sector",
+                "DataType": "String",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "Anonymisation",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "Country_of_Incorporation",
+                        "DataType": "String",
+                        "value": "United Kingdom",
+                        "operation": "=",
+                        "dsaprule_id": "dsap_yu-9"
+                      },
+                      {
+                        "name": "Legal_Entity_Name",
+                        "DataType": "String",
+                        "value": "ERRE GROUP",
+                        "operation": "=",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "FieldName": "Country_of_Incorporation",
+                "DataType": "String",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "null",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "null",
+                        "DataType": "null",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      },
+                      {
+                        "name": "null",
+                        "DataType": "String",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "FieldName": "Legal_Entity_Name",
+                "DataType": "String",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "Anonymisation",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "Country_of_Incorporation",
+                        "DataType": "String",
+                        "value": "China",
+                        "operation": "=",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "FieldName": "ID",
+                "DataType": "String",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "null",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "null",
+                        "DataType": "null",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      },
+                      {
+                        "name": "null",
+                        "DataType": "String",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "TableName": "fund_balance",
+          "VersionNumber": "1",
+          "TableID": "tty-44-yu",
+          "TableAlias": "AccountDetails",
+          "DataAsset": "Client Account",
+          "DataAssetCategory": "Client Account Details",
+          "HostingDetails": {
+            "CloudProviderName": "GCP",
+            "TableLocation": "EU",
+            "DataBaseName": "DSAPDemo",
+            "DataBasePort": "0",
+            "DataBaseProjectName": "gbm-big-data-pilot"
+          },
+          "TableRestrictions": [
+            {
+              "fields": [
+                {
+                  "name": "account_type_code",
+                  "DataType": "String",
+                  "value": "A",
+                  "operation": "!=",
+                  "dsaprule_id": "dsap_yu-9"
+                },
+                {
+                  "name": "balance",
+                  "DataType": "Numeric",
+                  "value": "23345",
+                  "operation": "<",
+                  "dsaprule_id": "dsap_yu-9"
+                }
+              ]
+            }
+          ],
+          "TableSchema": {
+            "TableFields": [
+              {
+                "FieldName": "account_type_code",
+                "DataType": "String",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "Anonymisation",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "null",
+                        "DataType": "null",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "FieldName": "account_id",
+                "DataType": "String",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "Anonymisation",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "null",
+                        "DataType": "null",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "null"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "FieldName": "cust_id",
+                "DataType": "String",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "null",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "null",
+                        "DataType": "null",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      },
+                      {
+                        "name": "null",
+                        "DataType": "String",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "FieldName": "balance",
+                "DataType": "Numeric",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "null",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "cust_id",
+                        "DataType": "String",
+                        "value": "C3",
+                        "operation": "=",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "usecasename": "Client Exiting Excluding UK",
+      "UseCaseCollibraID": "yty-76-u",
+      "masterusecase": "Client Management",
+      "MasterUseCaseCollibraId": "rtr-567-yuu",
+      "assettables": [
+        {
+          "TableName": "AccountDetails",
+          "VersionNumber": "2",
+          "TableID": "tty-44-yu",
+          "TableAlias": "AccountDetails",
+          "DataAsset": "Client Account",
+          "DataAssetCategory": "Client Account Details",
+          "HostingDetails": {
+            "CloudProviderName": "GCP",
+            "TableLocation": "EU",
+            "DataBaseName": "DSAPDemo",
+            "DataBasePort": "0",
+            "DataBaseProjectName": "gbm-big-data-pilot"
+          },
+          "TableRestrictions": [
+            {
+              "fields": [
+                {
+                  "name": "Country_of_Incorporation",
+                  "DataType": "String",
+                  "value": "United Kingdom",
+                  "operation": "!=",
+                  "dsaprule_id": "dsap_yu-9"
+                }
+              ]
+            }
+          ],
+          "TableSchema": {
+            "TableFields": [
+              {
+                "FieldName": "Consolidated_Account_Balance",
+                "DataType": "Float",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "Generalization",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "null",
+                        "DataType": "null",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "FieldName": "Sector",
+                "DataType": "String",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "Anonymisation",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "Country_of_Incorporation",
+                        "DataType": "String",
+                        "value": "United Kingdom",
+                        "operation": "=",
+                        "dsaprule_id": "dsap_yu-9"
+                      },
+                      {
+                        "name": "Legal_Entity_Name",
+                        "DataType": "String",
+                        "value": "ERRE GROUP",
+                        "operation": "=",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "FieldName": "Country_of_Incorporation",
+                "DataType": "String",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "null",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "null",
+                        "DataType": "null",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      },
+                      {
+                        "name": "null",
+                        "DataType": "String",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "FieldName": "Legal_Entity_Name",
+                "DataType": "String",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "Anonymisation",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "Country_of_Incorporation",
+                        "DataType": "String",
+                        "value": "China",
+                        "operation": "=",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "FieldName": "ID",
+                "DataType": "String",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "null",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "null",
+                        "DataType": "null",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      },
+                      {
+                        "name": "null",
+                        "DataType": "String",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "TableName": "fund_balance",
+          "VersionNumber": "1",
+          "TableID": "tty-44-yu",
+          "TableAlias": "AccountDetails",
+          "DataAsset": "Client Account",
+          "DataAssetCategory": "Client Account Details",
+          "HostingDetails": {
+            "CloudProviderName": "GCP",
+            "TableLocation": "EU",
+            "DataBaseName": "DSAPDemo",
+            "DataBasePort": "0",
+            "DataBaseProjectName": "gbm-big-data-pilot"
+          },
+          "TableRestrictions": [
+            {
+              "fields": [
+                {
+                  "name": "account_type_code",
+                  "DataType": "String",
+                  "value": "A",
+                  "operation": "!=",
+                  "dsaprule_id": "dsap_yu-9"
+                },
+                {
+                  "name": "balance",
+                  "DataType": "Numeric",
+                  "value": "23345",
+                  "operation": "<",
+                  "dsaprule_id": "dsap_yu-9"
+                }
+              ]
+            }
+          ],
+          "TableSchema": {
+            "TableFields": [
+              {
+                "FieldName": "account_type_code",
+                "DataType": "String",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "Anonymisation",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "null",
+                        "DataType": "null",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "FieldName": "account_id",
+                "DataType": "String",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "Anonymisation",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "null",
+                        "DataType": "null",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "null"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "FieldName": "cust_id",
+                "DataType": "String",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "null",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "null",
+                        "DataType": "null",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      },
+                      {
+                        "name": "null",
+                        "DataType": "String",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "FieldName": "balance",
+                "DataType": "Numeric",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "null",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "cust_id",
+                        "DataType": "String",
+                        "value": "C3",
+                        "operation": "=",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "usecasename": "Client Exiting Canada",
+      "UseCaseCollibraID": "yty-76-u",
+      "masterusecase": "Client Management",
+      "MasterUseCaseCollibraId": "rtr-567-yuu",
+      "assettables": [
+        {
+          "TableName": "AccountDetails",
+          "VersionNumber": "1",
+          "TableID": "tty-44-yu",
+          "TableAlias": "AccountDetails",
+          "DataAsset": "Client Account",
+          "DataAssetCategory": "Client Account Details",
+          "HostingDetails": {
+            "CloudProviderName": "GCP",
+            "TableLocation": "EU",
+            "DataBaseName": "DSAPDemo",
+            "DataBasePort": "0",
+            "DataBaseProjectName": "gbm-big-data-pilot"
+          },
+          "TableRestrictions": [
+            {
+              "fields": [
+                {
+                  "name": "Country_of_Incorporation",
+                  "DataType": "String",
+                  "value": "Canada",
+                  "operation": "=",
+                  "dsaprule_id": "dsap_yu-9"
+                }
+              ]
+            }
+          ],
+          "TableSchema": {
+            "TableFields": [
+              {
+                "FieldName": "Consolidated_Account_Balance",
+                "DataType": "Float",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "Generalization",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "null",
+                        "DataType": "null",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "FieldName": "Sector",
+                "DataType": "String",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "Anonymisation",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "Country_of_Incorporation",
+                        "DataType": "String",
+                        "value": "United Kingdom",
+                        "operation": "=",
+                        "dsaprule_id": "dsap_yu-9"
+                      },
+                      {
+                        "name": "Legal_Entity_Name",
+                        "DataType": "String",
+                        "value": "ERRE GROUP",
+                        "operation": "=",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "FieldName": "Country_of_Incorporation",
+                "DataType": "String",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "null",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "null",
+                        "DataType": "null",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      },
+                      {
+                        "name": "null",
+                        "DataType": "String",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "FieldName": "Legal_Entity_Name",
+                "DataType": "String",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "Anonymisation",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "Country_of_Incorporation",
+                        "DataType": "String",
+                        "value": "China",
+                        "operation": "=",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "FieldName": "ID",
+                "DataType": "String",
+                "id": "null",
+                "alias": "fieldalias",
+                "DataAsset": "datasset",
+                "DataAssetCategory": "DataAssetCategory",
+                "RestrictionType": "null",
+                "Restrictions": [
+                  {
+                    "fields": [
+                      {
+                        "name": "null",
+                        "DataType": "null",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      },
+                      {
+                        "name": "null",
+                        "DataType": "String",
+                        "value": "null",
+                        "operation": "null",
+                        "dsaprule_id": "dsap_yu-9"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
